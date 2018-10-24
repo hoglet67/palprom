@@ -1,0 +1,23 @@
+Watford Electronics PALPROM addresses
+
+The PALPROMs function as described in the included document with the ROM split into 8K blocks and 32 byte switching zones.
+The first 8K always appears as the first 8K in the 16K slot and the remaining 8K slot is switched to banks according to the following switching zones: 
+
+Quest Paint and ConQuest (32K)
+
+&8820 BANK 2
+&91E0 BANK 1
+&92C0 BANK 3
+&9340 BANK 0 (replicates 1st 8k in second 8k of slot)
+
+Wapping Editor (64K)
+
+&9F00 BANK 0 (replicates 1st 8k in second 8k of slot)
+&9F20 BANK 1
+&9F40 BANK 2
+&9F60 BANK 3
+&9F80 BANK 4
+&9FA0 BANK 5
+&9FC0 BANK 6
+&9FE0 BANK 7
+

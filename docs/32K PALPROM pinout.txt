@@ -1,0 +1,29 @@
+pld   socket
+1   2   A12
+2   26  A13 (Skt not Eprom)
+3   3   A7
+4   4   A6
+5   5   A5
+6   
+7   23  A11
+8   22  !OE
+9   21  A10
+10  14  GND
+11  20  !CE
+12  26  A13 (Eprom not skt)
+13  
+14  
+15  
+16  24  A9
+17  25  A8
+18  
+19      27  A14 (Eprom not skt)
+20  28  Vcc
+
+
+The PAL would need:
+- A14..A13 (output)
+- A13..A5 (input)
+- OE (input)
+- CE (input)
+
