@@ -1,0 +1,238 @@
+
+*******************************************************************************
+                                    PALPROM
+*******************************************************************************
+
+CUPL(WM)        5.0a Serial# 60008009
+Device          g16v8ma  Library DLIB-h-40-8
+Created         Wed Oct 24 11:29:05 2018
+Name            PALPROM     
+Partno          00          
+Revision        01          
+Date            24/10/2018  
+Designer        David Banks 
+Company         NA          
+Assembly        None        
+Location        
+
+===============================================================================
+                            Expanded Product Terms
+===============================================================================
+
+A13OUT =>
+    A13 & B0
+
+A14OUT =>
+    A13 & B1
+
+B0 =>
+    B0 & !B0_RES
+  # A5 & A6 & A7 & A8 & !A9 & !A10 & !A11 & A12 & !A13 & !NCE & !NOE
+  # !A5 & A6 & A7 & !A8 & A9 & !A10 & !A11 & A12 & !A13 & !NCE & !NOE
+
+B0_RES =>
+    !A5 & A6 & !A7 & A8 & A9 & !A10 & !A11 & A12 & !A13 & !NCE & !NOE
+  # A5 & !A6 & !A7 & !A8 & !A9 & !A10 & A11 & !A12 & !A13 & !NCE & !NOE
+
+B0_SET =>
+    A5 & A6 & A7 & A8 & !A9 & !A10 & !A11 & A12 & !A13 & !NCE & !NOE
+  # !A5 & A6 & A7 & !A8 & A9 & !A10 & !A11 & A12 & !A13 & !NCE & !NOE
+
+B1 =>
+    B1 & !B1_RES
+  # A5 & !A6 & !A7 & !A8 & !A9 & !A10 & A11 & !A12 & !A13 & !NCE & !NOE
+  # !A5 & A6 & A7 & !A8 & A9 & !A10 & !A11 & A12 & !A13 & !NCE & !NOE
+
+B1_RES =>
+    !A5 & A6 & !A7 & A8 & A9 & !A10 & !A11 & A12 & !A13 & !NCE & !NOE
+  # A5 & A6 & A7 & A8 & !A9 & !A10 & !A11 & A12 & !A13 & !NCE & !NOE
+
+B1_SET =>
+    A5 & !A6 & !A7 & !A8 & !A9 & !A10 & A11 & !A12 & !A13 & !NCE & !NOE
+  # !A5 & A6 & A7 & !A8 & A9 & !A10 & !A11 & A12 & !A13 & !NCE & !NOE
+
+BANKSEL0 =>
+    !A5 & A6 & !A7 & A8 & A9 & !A10 & !A11 & A12 & !A13 & !NCE & !NOE
+
+BANKSEL1 =>
+    A5 & A6 & A7 & A8 & !A9 & !A10 & !A11 & A12 & !A13 & !NCE & !NOE
+
+BANKSEL2 =>
+    A5 & !A6 & !A7 & !A8 & !A9 & !A10 & A11 & !A12 & !A13 & !NCE & !NOE
+
+BANKSEL3 =>
+    !A5 & A6 & A7 & !A8 & A9 & !A10 & !A11 & A12 & !A13 & !NCE & !NOE
+
+A8.oe  =>
+    0 
+
+A9.oe  =>
+    0 
+
+A13OUT.oe  =>
+    1 
+
+A14OUT.oe  =>
+    1 
+
+B0.oe  =>
+    1 
+
+B0_RES.oe  =>
+    1 
+
+B1.oe  =>
+    1 
+
+B1_RES.oe  =>
+    1 
+
+
+===============================================================================
+                                 Symbol Table
+===============================================================================
+
+Pin Variable                                    Pterms   Max     Min    
+Pol   Name              Ext     Pin     Type     Used   Pterms  Level   
+--- --------            ---     ---     ----    ------  ------  -----   
+
+    A5                          5        V        -       -       -     
+    A6                          4        V        -       -       -     
+    A7                          3        V        -       -       -     
+    A8                          17       V        -       -       -     
+    A9                          16       V        -       -       -     
+    A10                         9        V        -       -       -     
+    A11                         7        V        -       -       -     
+    A12                         1        V        -       -       -     
+    A13                         2        V        -       -       -     
+    A13OUT                      12       V        1       7       1     
+    A14OUT                      19       V        1       7       1     
+    B0                          13       V        3       7       1     
+    B0_RES                      15       V        2       7       1     
+    B0_SET                      0        I        2       -       -     
+    B1                          14       V        3       7       1     
+    B1_RES                      18       V        2       7       1     
+    B1_SET                      0        I        2       -       -     
+    BANKSEL0                    0        I        1       -       -     
+    BANKSEL1                    0        I        1       -       -     
+    BANKSEL2                    0        I        1       -       -     
+    BANKSEL3                    0        I        1       -       -     
+    NCE                         11       V        -       -       -     
+    NOE                         8        V        -       -       -     
+    A8                  oe      17       D        1       1       0     
+    A9                  oe      16       D        1       1       0     
+    A13OUT              oe      12       D        1       1       0     
+    A14OUT              oe      19       D        1       1       0     
+    B0                  oe      13       D        1       1       0     
+    B0_RES              oe      15       D        1       1       0     
+    B1                  oe      14       D        1       1       0     
+    B1_RES              oe      18       D        1       1       0     
+
+
+LEGEND    D : default variable         F : field      G : group
+          I : intermediate variable    N : node       M : extended node
+          U : undefined                V : variable   X : extended variable
+          T : function
+
+
+===============================================================================
+                                   Fuse Plot
+===============================================================================
+
+Syn   02192 - Ac0   02193 - 
+
+Pin #19  02048  Pol -  02120  Ac1 - 
+ 00000 -------------------------------- 
+ 00032 x---------------------x--------- 
+ 00064 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00096 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00128 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00160 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00192 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00224 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Pin #18  02049  Pol -  02121  Ac1 - 
+ 00256 -------------------------------- 
+ 00288 -xx--x--x-x--xx------x---x---x-x 
+ 00320 -xx-x---x-x-x--x-----x---x---x-x 
+ 00352 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00384 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00416 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00448 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00480 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Pin #17  02050  Pol x  02122  Ac1 - 
+ 00512 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00544 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00576 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00608 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00640 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00672 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00704 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00736 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Pin #16  02051  Pol x  02123  Ac1 - 
+ 00768 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00800 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00832 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00864 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00896 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00928 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00960 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00992 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Pin #15  02052  Pol -  02124  Ac1 - 
+ 01024 -------------------------------- 
+ 01056 -xx--x--x-x--xx------x---x---x-x 
+ 01088 -x-x-x---x-xx--x----x----x---x-x 
+ 01120 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01152 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01184 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01216 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01248 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Pin #14  02053  Pol -  02125  Ac1 - 
+ 01280 -------------------------------- 
+ 01312 -------x--------------x--------- 
+ 01344 -x-x-x---x-xx--x----x----x---x-x 
+ 01376 -xx-x---x--x-xx------x---x---x-x 
+ 01408 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01440 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01472 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01504 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Pin #13  02054  Pol -  02126  Ac1 - 
+ 01536 -------------------------------- 
+ 01568 -------------------x------x----- 
+ 01600 -xx-x---x-x-x--x-----x---x---x-x 
+ 01632 -xx-x---x--x-xx------x---x---x-x 
+ 01664 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01696 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01728 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01760 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Pin #12  02055  Pol -  02127  Ac1 - 
+ 01792 -------------------------------- 
+ 01824 x-------------------------x----- 
+ 01856 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01888 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01920 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01952 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01984 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 02016 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+
+
+LEGEND    X : fuse not blown 
+          - : fuse blown 
+
+===============================================================================
+                                 Chip Diagram
+===============================================================================
+
+                               ______________
+                              |   PALPROM    |
+                      A12 x---|1           20|---x Vcc                      
+                      A13 x---|2           19|---x A14OUT                   
+                       A7 x---|3           18|---x B1_RES                   
+                       A6 x---|4           17|---x A8                       
+                       A5 x---|5           16|---x A9                       
+                          x---|6           15|---x B0_RES                   
+                      A11 x---|7           14|---x B1                       
+                      NOE x---|8           13|---x B0                       
+                      A10 x---|9           12|---x A13OUT                   
+                      GND x---|10          11|---x NCE                      
+                              |______________|
+

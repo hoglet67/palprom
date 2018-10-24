@@ -1,0 +1,62 @@
+/* ***********************************************/
+/* PALPROM design for Quest Paint                */
+/* ***********************************************/
+
+Name     PALPROM     ;
+PartNo   00          ;
+Date     24/10/2018  ;
+Revision 01          ;
+Designer David Banks ;
+Company  NA          ;
+Assembly None        ;
+Location             ;
+Device   g16v8       ;
+
+/* *************** INPUT PINS *********************/
+
+PIN 1    = A12;
+PIN 2    = A13;
+PIN 3    = A7;
+PIN 4    = A6;
+PIN 5    = A5;
+PIN 7    = A11;
+PIN 8    = NOE;
+PIN 9    = A10;
+PIN 11   = NCE;
+PIN 16   = A9;
+PIN 17   = A8;
+
+/* *************** OUTPUT PINS *********************/
+
+PIN 12   = A13OUT;  /* A13 to 27C256 */
+PIN 19   = A14OUT;  /* A14 to 27C256 */
+
+PIN 13   = B0;      /* Bank select latch bit 0,              not connected on PCB */
+PIN 14   = B1;      /* Bank select latch bit 1,              not connected on PCB */
+PIN 15   = B0_RES;  /* Used to reduce # product terms in B0, not connected on PCB */
+PIN 18   = B1_RES;  /* Used to reduce # product terms in B1, not connected on PCB */
+
+/* *************** EQUATIONS ***********************/
+
+/* &9340 BANK 0 (replicates 1st 8k in second 8k of slot) */
+/* &91E0 BANK 1 */
+/* &8820 BANK 2 */
+/* &92C0 BANK 3 */
+
+BANKSEL0 = !NOE & !NCE & !A13 &  A12 & !A11 & !A10 &  A9 &  A8 & !A7 &  A6 & !A5;
+BANKSEL1 = !NOE & !NCE & !A13 &  A12 & !A11 & !A10 & !A9 &  A8 &  A7 &  A6 &  A5;
+BANKSEL2 = !NOE & !NCE & !A13 & !A12 &  A11 & !A10 & !A9 & !A8 & !A7 & !A6 &  A5;
+BANKSEL3 = !NOE & !NCE & !A13 &  A12 & !A11 & !A10 &  A9 & !A8 &  A7 &  A6 & !A5;
+
+/* B1/B0 are RS latches that represent the currently selected bank */
+B0_RES = BANKSEL0 # BANKSEL2;
+B0_SET = BANKSEL1 # BANKSEL3;
+B1_RES = BANKSEL0 # BANKSEL1;
+B1_SET = BANKSEL2 # BANKSEL3;
+
+B0     = (B0 & !B0_RES) # B0_SET;
+B1     = (B1 & !B1_RES) # B1_SET;
+
+/* If !A13 then always select BANK 0, otherwise select based on B1/B0 */
+A13OUT = A13 & B0;
+A14OUT = A13 & B1;
