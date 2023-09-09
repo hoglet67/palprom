@@ -4,8 +4,8 @@
 
 Name     PALPROM     ;
 PartNo   00          ;
-Date     25/10/2018  ;
-Revision 01          ;
+Date     09/09/2023  ;
+Revision 02          ;
 Designer David Banks ;
 Company  NA          ;
 Assembly None        ;
@@ -15,27 +15,27 @@ Device   g16v8       ;
 /* *************** INPUT PINS *********************/
 
 PIN 1    = A12;
-PIN 2    = A13;
-PIN 3    = A7;
-PIN 4    = A6;
-PIN 5    = A5;
-PIN 6    = A8;
-PIN 7    = A11;
-PIN 8    = NOE;
-PIN 9    = A10;
-PIN 11   = NCE;
-PIN 16   = A9;
+PIN 2    = A7;
+PIN 3    = A13;
+PIN 4    = A8;
+PIN 5    = A9;
+PIN 6    = A11;
+PIN 7    = NOE;
+PIN 8    = A10;
+PIN 9    = NCE;
+PIN 11   = A5;
+PIN 18   = A6;
 
 /* *************** OUTPUT PINS *********************/
 
-PIN 12   = A13OUT;  /* A13 to 27C256 */
-PIN 18   = A14OUT;  /* A14 to 27C256 */
-PIN 19   = A15OUT;  /* A15 to 27C256 */
+PIN 12   = A13OUT;  /* A13 to 27C512 */
+PIN 17   = A14OUT;  /* A14 to 27C512 */
+PIN 19   = A15OUT;  /* A15 to 27C512 */
 
 PIN 13   = B0;      /* Bank select latch bit 0,        not connected on PCB */
 PIN 14   = B1;      /* Bank select latch bit 1,        not connected on PCB */
 PIN 15   = B2;      /* Bank select latch bit 2,        not connected on PCB */
-PIN 17   = WRITE;   /* Used to reduce # product terms, not connected on PCB */
+PIN 16   = WRITE;   /* Used to reduce # product terms, not connected on PCB */
 
 /* *************** EQUATIONS ***********************/
 
